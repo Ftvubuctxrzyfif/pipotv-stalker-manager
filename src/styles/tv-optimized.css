@@ -1,0 +1,167 @@
+/* TV-Optimized Styles for LG WebOS TV */
+
+/* Increase base font size for TV viewing */
+:root {
+  --tv-base-size: 18px;
+  --tv-focus-ring: 0 0 0 4px rgba(59, 130, 246, 0.8);
+  --tv-focus-ring-offset: 2px;
+}
+
+/* Body base styles */
+body {
+  font-size: var(--tv-base-size);
+  line-height: 1.6;
+}
+
+/* TV-focused: Make all interactive elements larger and focus-visible */
+button,
+input,
+textarea,
+select,
+a {
+  font-size: 1.1rem;
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* Focus states for remote control navigation */
+*:focus-visible {
+  outline: none;
+  box-shadow: var(--tv-focus-ring);
+  outline-offset: var(--tv-focus-ring-offset);
+}
+
+/* Card elements focus */
+.card:focus-visible {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+/* Channel list items - larger for TV */
+.channel-list-item {
+  padding: 16px !important;
+  min-height: 64px;
+  font-size: 1.2rem;
+}
+
+/* Video player controls */
+video::-webkit-media-controls-panel {
+  font-size: 20px;
+}
+
+/* Input fields focus */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Scrollbar styling for TV */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Dialog/Modal larger for TV */
+[role="dialog"] {
+  font-size: 1.1rem;
+}
+
+/* Toast notifications */
+[data-toast] {
+  font-size: 1.2rem;
+  padding: 20px 24px;
+}
+
+/* Form labels */
+label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Button text size */
+button span,
+button svg {
+  font-size: 1.1rem;
+}
+
+/* Increase spacing in lists and grids */
+.gap-4 {
+  gap: 1.5rem !important;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1.5rem !important;
+}
+
+/* Responsive text sizes for TV */
+@media (min-width: 1920px) {
+  :root {
+    --tv-base-size: 20px;
+  }
+}
+
+/* Reduce motion option */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Keyboard navigation enhancements */
+[tabindex="0"] {
+  cursor: pointer;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  button,
+  input,
+  textarea,
+  select {
+    border-width: 2px;
+  }
+}
+
+/* Focus-visible improvements for remote control */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
+}
+
+/* TV-specific: Prevent text selection */
+button,
+a {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Loading spinner larger */
+.spinner {
+  width: 48px !important;
+  height: 48px !important;
+  border-width: 4px !important;
+}

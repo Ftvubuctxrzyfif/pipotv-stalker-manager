@@ -1,0 +1,20 @@
+{
+  "name": "Kabayo IPT",
+  "description": "Stalker Portal IPTV Manager for LW WebOS TV",
+  "icon": "/icon.png",
+  "background_color": "#0b1523",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "version": "1.0.0",
+  "author": "Kabayo IPT",
+  "category": "entertainment",
+  "supported_platforms": [
+    "WebOS 3.0+"
+  ],
+  "remote_controls": {
+    "arrow_keys": true,
+    "enter_key": true,
+    "back_button": true,
+    "exit_key": true
+  }
+}
